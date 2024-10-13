@@ -1,0 +1,121 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Title styling */
+h1 {
+    color: #3a3b3c;
+    margin-bottom: 20px;
+}
+
+/* Input and Button Styling */
+input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-right: 10px;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745; /* Green color for add button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Task List Styling */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    width: 340px;
+}
+
+li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete Button Styling */
+.delete {
+    padding: 5px 10px;
+    background-color: #dc3545; /* Red color for delete button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    input, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    ul {
+        width: 100%;
+    }
+}
+
+/* Pop-up Notification Styling */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green color for success */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 1000;
+}
+
+/* Pop-up Animation for Showing */
+.popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
